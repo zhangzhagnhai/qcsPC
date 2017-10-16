@@ -9,17 +9,17 @@
         <h2>氢创投资旗下三大核心品牌</h2>
         <ul class="introduceUl">
           <li>
-            <img src="/static/aa.png">
+            <img src="/static/qingchuangtongcheng.png">
             <p>专注新连锁、新零售、新体验、新服务、新金融五大创新项目，结合线下活动“百城千场”项目对接会为同城原创性好项目发展助力。</p>
             <div class="border"></div>
           </li>
           <li>
-            <img src="/static/aa.png">
+            <img src="/static/qingchuansghe.png">
             <p>新商业新连锁创投新媒体，新商业领域品牌策划、采编、新媒体传播，将同城企业品牌、创业家传播推广向全国，覆盖影响力100万人次。</p>
             <div class="border"></div>
           </li>
           <li>
-            <img src="/static/aa.png">
+            <img src="/static/qingchuangziben.png">
             <p>专注新连锁、新零售、新体验、新服务、新金融五大创新项目，结合线下活动“百城千场”项目对接会为同城原创性好项目发展助力。</p>
           </li>
         </ul>
@@ -29,34 +29,34 @@
           <div class="resolve">氢创投资为您解决了哪些问题</div>
           <ul class="resolveUl">
               <li>
-                <img src="/static/aa.png">
+                <img src="/static/chuangyezhe.png">
                 <h3>创业者</h3>
                 <p>提供良好的项目平台<br>提供良好的项目平台提供良好</p>
               </li>
               <li>
-                <img src="/static/aa.png">
+                <img src="/static/xiangmu.png">
                 <h3>项目</h3>
                 <p>获得资金、资源、产业链、<br>加盟招商合作、品牌推广等</p>
               </li>
             <li>
-              <img src="/static/aa.png">
+              <img src="/static/zijinfang.png">
               <h3>资金方</h3>
               <p>投资到优质项目<br>投资到优质项目投资到优</p>
             </li>
             <li>
-              <img src="/static/aa.png">
+              <img src="/static/cahnyelian.png">
               <h3>产业链</h3>
               <p>促进多方资源对接，<br>租金产业链的连接和提升</p>
             </li>
             <li>
-              <img src="/static/aa.png">
+              <img src="/static/chuangyefuwu.png">
               <h3>创业服务</h3>
               <p>为第三方服务企业<br>的机构提供优质对象</p>
             </li>
           </ul>
       </div>
      <!--大事记-->
-     <div class="eventContain">
+      <div class="eventContain">
        <div class="resolve" style="margin-bottom: 93px">大事记大事记大事记大事记</div>
        <div v-for="event in events">
           <div v-if="event.bigCircle" class="bigCircle">
@@ -66,13 +66,25 @@
           <div class="line"></div>
        </div>
      </div>
-      <!--加入氢创同城-->
-      <div class="resolveContain">
-        <div class="resolve">城市合伙人招募</div>
+      <!--常见问题-->
+      <div style="min-width: ">
+
       </div>
+      <!--加入氢创同城-->
+      <div class="addContain">
+        <div class="addTitle">城市合伙人招募</div>
+        <ul class="addUl">
+          <li><span class="name"><span style="color: #c32225">*&nbsp;</span>姓名:</span><input type="text"/></li>
+          <li><span class="name"><span style="color: #c32225">*&nbsp;</span>电话:</span><input type="text"/></li>
+          <li><span class="name"><span style="color: #c32225">*&nbsp;</span>所在城市:</span><input type="text"/></li>
+          <li><span class="name">邮箱:</span><input type="email"/></li>
+        </ul>
+        <div class="submit">立即提交</div>
+      </div>
+      <!--底部-->
       <div class="footer">
          <div style="width: 1200px;height: 160px;padding-top: 35px">
-            <img src="/static/aa.png" class="footerLeft">
+            <img src="/static/dingbuLOGO.png" class="footerLeft">
             <div class="footerCenter">
                <div class="centerA">关于我们<span>|</span><span>保密说明</span></div>
                <div class="centerB" style="margin-top: 56px;">联系电话:0577-86121121<span style="margin-left: 30px">
@@ -82,15 +94,15 @@
             </div>
             <ul class="footerRight">
               <li>
-                <img src="/static/aa.png">
+                <img src="/static/qingchuangtongchengerweima.png">
                 <div>氢创同城公众号</div>
               </li>
               <li>
-                <img src="/static/aa.png">
+                <img src="/static/qingchuangshe.png">
                 <div>氢创社公众号</div>
               </li>
               <li>
-                <img src="/static/aa.png">
+                <img src="/static/weibo.png">
                 <div>微博</div>
               </li>
             </ul>
@@ -101,9 +113,8 @@
 <script>
   import centerContainer from '../components/centerContainer.vue'
   export default {
-    name: 'HelloWorld',
-    data () {
-      return {
+    data(){
+    return {
         events:[
           {bigCircle:1,year:'2017'},
           {bigCircle:0,dayLeft:1,year:'2017',Mouth:'Apr',day:'/01',title:"氢创社新版微信平台上线",detail:"用更专业的更完善的态度服务天使投资人和创业者"},
@@ -115,42 +126,9 @@
       }
     },
     components:{
-      centerContainer
+        centerContainer
     }
   }
 </script>
-<style scoped>
-  body{width: 100%}
-   div{margin: 0 auto}
-   .intro{min-width: 1200px; font-size: 30px; margin: 135px auto 37px; color: #545d69;}
-   .introduce{min-width: 1200px;font-size: 17px; line-height: 29px; text-align: center;  margin: 0 auto; color: #545d69}
-   h2{min-width: 1200px;margin: 99px auto 100px; font-size: 24px; color: #545d69; font-weight: bold;}
-   .introduceUl{min-width: 1200px; height: 185px; margin: 0 auto; display: inline-block}
-   .introduceUl li{height: 185px; width: 400px; float: left; position: relative;}
-   .introduceUl li img{height: 65px;}
-   .introduceUl li p{padding: 0 32px; line-height: 26px; font-size: 16px; text-align: left; color: #8f9ba4; margin-top: 48px;}
-   .border{position: absolute; top:18px; border-right: 1px solid #dddddd; height: 150px; width: 100%}
-   .resolveContain{min-width: 1200px; background-color: #f7f7f7; padding:135px 0 133px; width: 100%}
-   .resolve{min-width: 1200px;font-size: 34px;color: #545d69; text-align: center}
-   .resolveUl{min-width: 1200px; height: 256px; margin: 100px auto 0; display: inline-block}
-   .resolveUl li{height: 256px; width: 240px; float: left; position: relative; text-align: center}
-   .resolveUl li img{width: 105px;}
-   .resolveUl li h3{margin-top:45px; font-size: 24px; color: #545d69; text-align: center; font-weight: norma5l;}
-   .resolveUl li p{line-height: 26px; font-size: 16px;  text-align: center; color: #8f9ba4; margin-top: 35px; }
-   .eventContain{padding: 135px 0; font-size: 0; min-width: 1200px}
-
-  .bigCircle{width: 47px; height: 47px; border-radius: 50%; border:1px solid #60a5d9; padding: 4px;}
-  .bigCircle div{width: 47px; height: 47px; line-height: 47px; font-size: 14px; text-align: center; font-weight: bold; color: white; border-radius: 50%; background-color: #99d4ef}
-  .line{width: 1px; background-color: #dddddd; height: 39px;}
-
-
-  .footer{height: 195px;width: 100%; min-width: 1200px; background-color: #2f3643; margin: 0 auto}
-  .footerLeft{height: 50px; width: 160px; float: left;}
-   .footerCenter{float: left; margin-left: 63px;  width: 633px; color: white;text-align: left;}
-  .centerA span{margin-left: 20px; font-size: 18px}
-   .centerB{font-size: 13px; text-align: left;}
-  .footerRight{float: left; width: 342px; margin-top: 6px;}
-  .footerRight li{width: 104px;  float: left;}
-   .footerRight li img{width: 90px; height: 90px}
-   .footerRight li div{font-size: 14px; margin-top: 12px; color: white; text-align: center}
+<style src="../assets/css/home.css" scoped>
 </style>
