@@ -1,7 +1,28 @@
 <template>
   <div>
+      <div style=" overflow: hidden;min-width: 1200px; width: 100%; height: 945px; background: url('/static/aa.png') center center; background-size: cover;">
+        <div style="width: 1200px; margin: 0 auto">
+          <img src="/static/aa.png" style="float: left; margin-top: 52px; height: 43px;">
+          <ul style="width: 475px;height: 116px; float: right; border-bottom: 1px solid #dddddd;">
+            <li style="float: left; width:95px; font-size: 16px; padding: 70px 0 30px; background-color: #99d4ef; color: #303641"><a href="#qcjj">同城简介</a></li>
+            <li style="float: left; width:95px; font-size: 16px; padding: 70px 0 30px; color: #ffffff"><a href="#qcjj">解决问题</a></li>
+            <li style="float: left; width:95px; font-size: 16px; padding: 70px 0 30px; color: #ffffff"><a href="#qcjj">价值提供</a></li>
+            <li style="float: left; width:95px; font-size: 16px; padding: 70px 0 30px; color: #ffffff"><a href="#qcjj">已加合伙人</a></li>
+            <li style="float: left; width:95px; font-size: 16px; padding: 70px 0 30px; color: #ffffff"><a href="#qcjj">常见问题</a></li>
+          </ul>
+        </div>
+        <img src="/static/aa.png" style="position: absolute; width: 630px; top:201px;z-index: 99; left:0; right: 0; margin: 0 auto;">
+        <img src="/static/aa.png" style="position: absolute; width: 325px; top:270px;z-index: 99; left:0; right: 0; margin: 0 auto;">
+        <div style="position: relative;margin-top: 606px; overflow: hidden; color: white; font-size: 26px; z-index: 100">氢创同城</div>
+        <div style="position: relative;margin-top: 25px; overflow: hidden; color: white; font-size: 20px; z-index: 100">项目投融资服务 \ 项目培育孵化 \ 新媒体服务 \ 项目对接活动服务 \ 全国100个分社</div>
+        <div style="height:4px;width: 240px; margin-top: 48px">
+          <div style="margin: 0 10px;height:4px; width: 60px; float: left; background-color: #99d4ef"></div>
+          <div style="margin: 0 10px;height:4px; width: 60px; float: left; background-color: #fff"></div>
+          <div style="margin: 0 10px;height:4px; width: 60px; float: left; background-color: #fff"></div>
+        </div>
+      </div>
       <!--氢创简介-->
-      <div style="margin-bottom: 135px;">
+      <div id="qcjj" style="margin-bottom: 135px;">
         <div class="intro">氢创投资，携手您进入新商业新连锁时代</div>
         <p class="introduce">氢创投资（浙江氢创投资有限公司）成立于2015年，专注于种子、天使期项目孵化及股权投融资。</p>
         <p class="introduce">自2015年开始，氢创组织近百场大型活动峰会、项目路演、论坛、沙龙、大赛，有超过百位一线投资人列席，氢创自媒体影响近五百万人次。</p>
