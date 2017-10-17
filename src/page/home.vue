@@ -1,24 +1,26 @@
 <template>
   <div>
-      <div style=" overflow: hidden;min-width: 1200px; width: 100%; height: 945px; background: url('/static/aa.png') center center; background-size: cover;">
-        <div style="width: 1200px; margin: 0 auto">
-          <img src="/static/aa.png" style="float: left; margin-top: 52px; height: 43px;">
-          <ul style="width: 475px;height: 116px; float: right; border-bottom: 1px solid #dddddd;">
-            <li style="float: left; width:95px; font-size: 16px; padding: 70px 0 30px; background-color: #99d4ef; color: #303641"><a href="#qcjj">同城简介</a></li>
-            <li style="float: left; width:95px; font-size: 16px; padding: 70px 0 30px; color: #ffffff"><a href="#qcjj">解决问题</a></li>
-            <li style="float: left; width:95px; font-size: 16px; padding: 70px 0 30px; color: #ffffff"><a href="#qcjj">价值提供</a></li>
-            <li style="float: left; width:95px; font-size: 16px; padding: 70px 0 30px; color: #ffffff"><a href="#qcjj">已加合伙人</a></li>
-            <li style="float: left; width:95px; font-size: 16px; padding: 70px 0 30px; color: #ffffff"><a href="#qcjj">常见问题</a></li>
+      <!--头部导航-->
+      <div class="topContain">
+        <img src="static/banner1.png" class="topImg">
+        <div class="topCol">
+          <img src="static/dibuLOGO.png">
+          <ul>
+            <li><a href="#qcjj" class="select">同城简介</a></li>
+            <li><a href="#jjwt">解决问题</a></li>
+            <li><a href="#dsj">价值提供</a></li>
+            <li><a href="#qcjj">已加合伙人</a></li>
+            <li><a href="#cjwt">常见问题</a></li>
           </ul>
         </div>
-        <img src="/static/aa.png" style="position: absolute; width: 630px; top:201px;z-index: 99; left:0; right: 0; margin: 0 auto;">
-        <img src="/static/aa.png" style="position: absolute; width: 325px; top:270px;z-index: 99; left:0; right: 0; margin: 0 auto;">
-        <div style="position: relative;margin-top: 606px; overflow: hidden; color: white; font-size: 26px; z-index: 100">氢创同城</div>
-        <div style="position: relative;margin-top: 25px; overflow: hidden; color: white; font-size: 20px; z-index: 100">项目投融资服务 \ 项目培育孵化 \ 新媒体服务 \ 项目对接活动服务 \ 全国100个分社</div>
-        <div style="height:4px;width: 240px; margin-top: 48px">
-          <div style="margin: 0 10px;height:4px; width: 60px; float: left; background-color: #99d4ef"></div>
-          <div style="margin: 0 10px;height:4px; width: 60px; float: left; background-color: #fff"></div>
-          <div style="margin: 0 10px;height:4px; width: 60px; float: left; background-color: #fff"></div>
+        <img src="static/diandian.png" class="diandian">
+        <img src="static/tieLOGO.png" class="logo">
+        <div class="title">氢创同城</div>
+        <div class="describe">项目投融资服务 \ 项目培育孵化 \ 新媒体服务 \ 项目对接活动服务 \ 全国100个分社</div>
+        <div class="selectDiv">
+          <a class="select"></a>
+          <a></a>
+          <a></a>
         </div>
       </div>
       <!--氢创简介-->
@@ -46,7 +48,7 @@
         </ul>
       </div>
       <!--解决问题-->
-      <div class="resolveContain">
+      <div id="jjwt" class="resolveContain">
           <div class="resolve">氢创投资为您解决了哪些问题</div>
           <ul class="resolveUl">
               <li>
@@ -77,7 +79,7 @@
           </ul>
       </div>
      <!--大事记-->
-      <div class="eventContain">
+      <div id="dsj" class="eventContain">
        <div class="resolve" style="margin-bottom: 93px">大事记大事记大事记大事记</div>
        <div v-for="event in events">
           <div v-if="event.bigCircle" class="bigCircle">
@@ -88,11 +90,50 @@
        </div>
      </div>
       <!--常见问题-->
-      <div style="min-width: ">
+      <div id="cjwt" class="problemContain">
+          <img src="static/changjianwenti.png" class="problemImg">
+          <div class="title">常见问题</div>
+          <div class="problemScroll">
+             <div class="problemTitle">
+                 <img src="static/dian.png" />
+                 <div>券商理财是什么？</div>
+             </div>
+             <p>券商理财是指证券公司管理，并且在中国证监会备案过的理财产品，产品募集的资金全部都托管在指定银行监管，资金非常安全。而且其风险低，投资者承担的风险小。</p>
 
+            <div class="problemTitle">
+              <img src="static/dian.png" />
+              <div>什么时候起息？</div>
+            </div>
+            <p>在产品募集结束日后的下一个工作日开始计息（T+1日）。计息第二天推送前一天收益。</p>
+
+            <div class="problemTitle">
+              <img src="static/dian.png" />
+              <div>取现什么时候能到账？</div>
+            </div>
+            <p>到期日赎回，本金和收益会于3个工作日内，转到您的原支付账户。</p>
+
+            <div class="problemTitle">
+              <img src="static/dian.png" />
+              <div>再次购买的起购金额？</div>
+            </div>
+            <p>券商理财是指证券公司管理，并且在中国证监会备案过的理财产品，产品募集的资金全部都托管在指定银行监管，资金非常安全。而且其风险低，投资者承担的风险小。</p>
+
+            <div class="problemTitle">
+              <img src="static/dian.png" />
+              <div>为什么有时理财周期与产品名称显示理财天数不一致？</div>
+            </div>
+            <p>若申购日或赎回日赶到法定假日无法进行操作，故实际理财期限会因此缩短或延长几天，计息时间与实际理财期限一致。</p>
+
+            <div class="problemTitle">
+              <img src="static/dian.png" />
+              <div>为什么有时理财周期与产品名称显示理财天数不一致？</div>
+            </div>
+            <p>到期日赎回，本金和收益会于3个工作日内，转到您的原支付账户。</p>
+          </div>
       </div>
       <!--加入氢创同城-->
-      <div class="addContain">
+      <div id="jr" class="addContain">
+        <img src="static/chengshihehuorenzhaomu.png">
         <div class="addTitle">城市合伙人招募</div>
         <ul class="addUl">
           <li><span class="name"><span style="color: #c32225">*&nbsp;</span>姓名:</span><input type="text"/></li>

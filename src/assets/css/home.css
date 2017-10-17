@@ -1,5 +1,20 @@
 body{width: 100%}
 div{margin: 0 auto}
+.topContain{overflow: hidden; background-size: cover; min-width: 1200px; width: 100%; height: 945px;}
+.topImg{min-width: 1200px; width: 100%; height: 945px; position: absolute; top:0; left: 0; z-index: -1;}
+.topCol{width: 1200px; margin: 0 auto;position: relative;}
+.topCol img{float: left; margin-top: 52px; height: 43px;}
+.topCol ul{width: 475px;height: 116px; float: right; border-bottom: 1px solid #dddddd;}
+.topCol ul li{float: left; width:95px;}
+.topCol ul li a{ font-size: 16px; height: 16px; line-height: 16px; padding: 70px 0 30px; color: #ffffff}
+.topCol ul li a:hover,.topCol ul li .select{ font-size: 16px; height: 16px; line-height: 16px; padding: 70px 0 30px; color: #303641;background-color: #99d4ef; }
+.diandian{position: absolute; width: 630px; top:201px;z-index: 99; left:0; right: 0; margin: 0 auto;}
+.logo{position: absolute; width: 325px; top:270px;z-index: 99; left:0; right: 0; margin: 0 auto;}
+.title{position: relative;margin-top: 606px; overflow: hidden; color: white; font-size: 26px; z-index: 100}
+.describe{position: relative;margin-top: 25px; overflow: hidden; color: white; font-size: 20px; z-index: 100}
+.selectDiv{position: relative; height:4px;width: 240px; margin-top: 48px}
+.selectDiv a{margin: 0 10px;height:4px; width: 60px; float: left; background-color: #fff}
+.selectDiv a:hover,.selectDiv .select{background-color: #99d4ef}
 .intro{min-width: 1200px; font-size: 30px; margin: 135px auto 37px; color: #545d69;}
 .introduce{min-width: 1200px;font-size: 17px; line-height: 29px; text-align: center;  margin: 0 auto; color: #545d69}
 h2{min-width: 1200px;margin: 99px auto 100px; font-size: 24px; color: #545d69; font-weight: bold;}
@@ -21,13 +36,23 @@ h2{min-width: 1200px;margin: 99px auto 100px; font-size: 24px; color: #545d69; f
 .bigCircle div{width: 47px; height: 47px; line-height: 47px; font-size: 14px; text-align: center; font-weight: bold; color: white; border-radius: 50%; background-color: #99d4ef}
 .line{width: 1px; background-color: #dddddd; height: 39px;}
 
-.addContain{min-width: 1200px; height: 420px; background: url("static/chengshihehuorenzhaomu.png") center center; background-size: cover; width: 100%}
-.addTitle{min-width: 1200px;font-size: 30px; padding:70px 0; color: white; text-align: center}
-.addUl{width: 790px; height: 110px; margin: 0 auto}
+.problemContain{position: relative; min-width: 1200px; height: 875px; overflow: hidden;}
+.problemImg{min-width: 1345px; height: 490px; width: 1345px; position: absolute; top:0; left: 0; z-index: -1;}
+.problemContain .title{position: relative; font-size: 30px; margin-top: 46px; color: #545d69;}
+.problemScroll{padding:16px 60px 0; width:980px; height: 514px; margin: 62px auto 208px; overflow-Y: scroll; background-color: white}
+.problemTitle{margin-top: 34px; font-size: 17px; height: 17px; line-height: 17px}
+.problemTitle img{height: 5px; margin-top: 6px; float: left;}
+.problemTitle div{float: left; margin-left: 20px; color: #545d69; font-weight: bold;}
+.problemScroll p{padding-left:25px; font-size: 14px; line-height: 26px; color:#8f9ba4; text-align: left; margin-top: 9px;}
+
+.addContain{min-width: 1200px; height: 420px; width: 100%; position: relative;}
+.addContain img{min-width: 1200px; height: 420px; width: 100%; position: absolute; top:0; left: 0; z-index: -1;}
+.addTitle{ position: relative; min-width: 1200px;font-size: 30px; padding:70px 0; color: white; text-align: center}
+.addUl{position: relative;width: 790px; height: 110px; margin: 0 auto}
 .addUl li{border-radius:5px; margin: 10px 20px; width: 353px; height: 33px; float: left;background-color: rgba(255,255,255,0.35); border: 1px solid rgba(255,255,255,0.65)}
 .addUl li .name{font-size: 16px; height:33px; line-height: 33px; padding-left: 20px; text-align: left; float: left; color: white;}
 .addUl li input{font-size: 16px; line-height: 33px; padding-left: 20px; text-align: left; float: left; color: white;}
-.submit{width: 210px; height: 42px; line-height: 42px; margin-top: 40px; color: white; background-color: #4193d5; border-radius: 5px;}
+.submit{position: relative;width: 210px; height: 42px; line-height: 42px; margin-top: 40px; color: white; background-color: #4193d5; border-radius: 5px;}
 
 .footer{height: 195px;width: 100%; min-width: 1200px; background-color: #2f3643; margin: 0 auto}
 .footerLeft{height: 50px; width: 160px; float: left;}
