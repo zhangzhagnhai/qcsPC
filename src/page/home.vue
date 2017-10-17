@@ -9,17 +9,17 @@
         <h2>氢创投资旗下三大核心品牌</h2>
         <ul class="introduceUl">
           <li>
-            <img src="/static/qingchuangtongcheng.png">
+            <img src="static/qingchuangtongcheng.png">
             <p>专注新连锁、新零售、新体验、新服务、新金融五大创新项目，结合线下活动“百城千场”项目对接会为同城原创性好项目发展助力。</p>
             <div class="border"></div>
           </li>
           <li>
-            <img src="/static/qingchuansghe.png">
+            <img src="static/qingchuansghe.png">
             <p>新商业新连锁创投新媒体，新商业领域品牌策划、采编、新媒体传播，将同城企业品牌、创业家传播推广向全国，覆盖影响力100万人次。</p>
             <div class="border"></div>
           </li>
           <li>
-            <img src="/static/qingchuangziben.png">
+            <img src="static/qingchuangziben.png">
             <p>专注新连锁、新零售、新体验、新服务、新金融五大创新项目，结合线下活动“百城千场”项目对接会为同城原创性好项目发展助力。</p>
           </li>
         </ul>
@@ -29,27 +29,27 @@
           <div class="resolve">氢创投资为您解决了哪些问题</div>
           <ul class="resolveUl">
               <li>
-                <img src="/static/chuangyezhe.png">
+                <img src="static/chuangyezhe.png">
                 <h3>创业者</h3>
                 <p>提供良好的项目平台<br>提供良好的项目平台提供良好</p>
               </li>
               <li>
-                <img src="/static/xiangmu.png">
+                <img src="static/xiangmu.png">
                 <h3>项目</h3>
                 <p>获得资金、资源、产业链、<br>加盟招商合作、品牌推广等</p>
               </li>
             <li>
-              <img src="/static/zijinfang.png">
+              <img src="static/zijinfang.png">
               <h3>资金方</h3>
               <p>投资到优质项目<br>投资到优质项目投资到优</p>
             </li>
             <li>
-              <img src="/static/cahnyelian.png">
+              <img src="static/cahnyelian.png">
               <h3>产业链</h3>
               <p>促进多方资源对接，<br>租金产业链的连接和提升</p>
             </li>
             <li>
-              <img src="/static/chuangyefuwu.png">
+              <img src="static/chuangyefuwu.png">
               <h3>创业服务</h3>
               <p>为第三方服务企业<br>的机构提供优质对象</p>
             </li>
@@ -84,7 +84,7 @@
       <!--底部-->
       <div class="footer">
          <div style="width: 1200px;height: 160px;padding-top: 35px">
-            <img src="/static/dingbuLOGO.png" class="footerLeft">
+            <img src="static/dingbuLOGO.png" class="footerLeft">
             <div class="footerCenter">
                <div class="centerA">关于我们<span>|</span><span>保密说明</span></div>
                <div class="centerB" style="margin-top: 56px;">联系电话:0577-86121121<span style="margin-left: 30px">
@@ -94,15 +94,15 @@
             </div>
             <ul class="footerRight">
               <li>
-                <img src="/static/qingchuangtongchengerweima.png">
+                <img src="static/qingchuangtongchengerweima.png">
                 <div>氢创同城公众号</div>
               </li>
               <li>
-                <img src="/static/qingchuangshe.png">
+                <img src="static/qingchuangshe.png">
                 <div>氢创社公众号</div>
               </li>
               <li>
-                <img src="/static/weibo.png">
+                <img src="static/weibo.png">
                 <div>微博</div>
               </li>
             </ul>
