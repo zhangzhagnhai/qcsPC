@@ -1,0 +1,38 @@
+<template>
+  <!--底部-->
+  <div class="footer">
+    <div style="width: 1200px;height: 160px;padding-top: 35px">
+      <img src="static/dingbuLOGO.png" class="footerLeft">
+      <div class="footerCenter">
+        <div class="centerA">关于我们<span>|</span><span>保密说明</span></div>
+        <div class="centerB" style="margin-top: 56px;">联系电话:0577-86121121<span style="margin-left: 30px">
+                 传真:0577-5557
+               </span></div>
+        <div class="centerB" style="margin-top: 16px;">公司地址:浙江省温州市文昌路高新技术园D幢4楼、蒲中路11号温商中心4楼</div>
+      </div>
+      <ul class="footerRight">
+        <li>
+          <img src="static/qingchuangtongchengerweima.png">
+          <div>氢创同城公众号</div>
+        </li>
+        <li>
+          <img src="static/qingchuangshe.png">
+          <div>氢创社公众号</div>
+        </li>
+        <li>
+          <img src="static/weibo.png">
+          <div>微博</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</template>
+<script>
+  export default {
+    data(){
+      return{}
+    }
+  }
+</script>
+<style src="../assets/css/home.css" scoped>
+</style>

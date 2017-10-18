@@ -80,7 +80,7 @@
       </div>
      <!--大事记-->
       <div id="dsj" class="eventContain">
-       <div class="resolve" style="margin-bottom: 93px">大事记大事记大事记大事记</div>
+       <div class="titleX" style="margin-bottom: 93px">大事记大事记大事记大事记</div>
        <div v-for="event in events">
           <div v-if="event.bigCircle" class="bigCircle">
             <div>{{event.year}}</div>
@@ -89,10 +89,132 @@
           <div class="line"></div>
        </div>
      </div>
+      <!--加入步骤-->
+      <div>
+        <div class="titleX" style=" margin-top: 135px;">城市合伙人招募，城市合伙人招募</div>
+         <div style="height: 760px; min-width: 1002px;">
+             <div @mouseout="stepHoverIndex=7"  class="stepMenu">
+               <div :class='stepHoverIndex==1||stepIndex==1?"select":""' @mouseover="stepHoverIndex=1"  @click="stepIndex=1">为什么加入</div>
+               <div :class='stepHoverIndex==2||stepIndex==2?"select":""' @mouseover="stepHoverIndex=2"  @click="stepIndex=2">合作模式</div>
+               <div :class='stepHoverIndex==3||stepIndex==3?"select":""' @mouseover="stepHoverIndex=3"  @click="stepIndex=3">收益分配</div>
+               <div :class='stepHoverIndex==4||stepIndex==4?"select":""' @mouseover="stepHoverIndex=4"  @click="stepIndex=4">加入条件</div>
+               <div :class='stepHoverIndex==5||stepIndex==5?"select":""' @mouseover="stepHoverIndex=5"  @click="stepIndex=5">合作流程</div>
+               <div :class='stepHoverIndex==6||stepIndex==6?"select":""' @mouseover="stepHoverIndex=6"  @click="stepIndex=6">申请加入</div>
+             </div>
+             <div v-if="stepIndex==1" id="step1" style="width: 1002px;">
+                <div class="stepLeftOne">
+                    <div class="stepTitle">为什么加入</div>
+                    <p>旨在打造氢创同城“新商业中心”创投全国网络，链接有志新商业创投精英，分享同城创投红利，为新商业新连锁的创业提供定制快车道。</p>
+                    <a href="#jr">立即加入</a>
+                </div>
+                <img src="static/weishemejiaru.png" style="float: left; margin: 100px 0 0 116px;">
+             </div>
+
+             <div v-if="stepIndex==2" id="step2" style="width: 1002px;">
+               <div class="stepLeftOne" style="width: 537px">
+                 <div class="stepTitle" style="margin-bottom: 20px;">合作模式</div>
+                 <div class="stepContain">
+                   <img src="static/dian.png">
+                   <span>优质项目落地输出：</span>
+                   <p>输送极具商机潜力的项目，进行培育推广、招商对接、投融资服务等落地经营。</p>
+                 </div>
+                 <div class="stepContain">
+                   <img src="static/dian.png">
+                   <span>创投网络平台输出：</span>
+                   <p>全国分社共享创投资源和服务，包括项目、投资人、顾问导师等，并做企业相互媒体营销推广。</p>
+                 </div>
+                 <div class="stepContain">
+                   <img src="static/dian.png">
+                   <span>服务输出：</span>
+                   <p>创投峰会、招商对接、投融资对接、展会展览、游学等。</p>
+                 </div>
+                 <div class="stepContain">
+                   <img src="static/dian.png">
+                   <span>投资机构输出：</span>
+                   <p>基金投资联盟机构输出。</p>
+                 </div>
+                 <a href="#jr">立即加入</a>
+               </div>
+               <img src="static/hezuomoshi.png" style="float: left; margin: 127px 0 0 58px;">
+             </div>
+
+             <div v-if="stepIndex==3" id="step3" style="width: 1002px;">
+             <div class="stepLeftOne" style="width: 500px">
+               <div class="stepTitle" style="margin-bottom: 20px;">收益收益</div>
+               <div class="stepContainThr">
+                 <img src="static/dian.png">
+                 <p>项目股权投融资收益，包括项目培育、项目投资、项目融资对接服务收益</p>
+               </div>
+               <div class="stepContainThr">
+                 <img src="static/dian.png">
+                 <p>招商落地同城对接合作服务收益</p>
+               </div>
+               <div class="stepContainThr">
+                 <img src="static/dian.png">
+                 <p>展览、游学、培训、活动合作收益</p>
+               </div>
+               <div class="stepContainThr">
+                 <img src="static/dian.png">
+                 <p>会员招募服务合作收益等</p>
+               </div>
+               <a href="#jr">立即加入</a>
+             </div>
+             <img src="static/shouyi.png" style="float: left; margin: 105px 0 0 55px;">
+           </div>
+
+             <div v-if="stepIndex==4" id="step4" style="width: 1002px;">
+             <div class="stepLeftOne" style="width: 500px">
+               <div class="stepTitle" style="margin-bottom: 20px;">加入条件</div>
+               <div class="stepContainThr">
+                 <img src="static/dian.png">
+                 <p>热爱创投事业或已投身于创投事业并有自己的组织和空间</p>
+               </div>
+               <div class="stepContainThr">
+                 <img src="static/dian.png">
+                 <p>擅长品牌包装、媒体推广、会务策划创始人才队伍为佳</p>
+               </div>
+               <div class="stepContainThr">
+                 <img src="static/dian.png">
+                 <p>具有一定的创投界人脉，并有志于商业连锁领域开拓创投事业者</p>
+               </div>
+               <div class="stepContainThr">
+                 <img src="static/dian.png">
+                 <p>认同氢创同城经营价值观</p>
+               </div>
+               <a href="#jr">立即加入</a>
+             </div>
+             <img src="static/jiarutiaojian.png" style="float: left; margin: 105px 0 0 135px;">
+           </div>
+
+             <div v-if="stepIndex==5" id="step5" style="width: 1002px;">
+             <div class="stepLeftOne" style="width: 530px">
+               <div class="stepTitle" style="margin-bottom: 20px;">合作流程</div>
+               <div class="stepContainThr" style="width: 530px">
+                 <img src="static/dian.png">
+                 <p>①提交申请--②资质审核--③实地考察--④沟通合作细节--⑤签约</p>
+               </div>
+               <a href="#jr">立即加入</a>
+             </div>
+             <img src="static/hezuoliucheng.png" style="float: left; margin: 105px 0 0 55px;">
+           </div>
+
+             <div v-if="stepIndex==6" id="step6" style="width: 1002px; position: relative">
+                <img src="static/shenqingjiaru.png" style="position: absolute; width: 562px; height: 498px; margin: 0 auto; top:0; left: 0; right: 0;">
+                 <div class="stepAddTitle">申请加入</div>
+                 <ul class="stepAddUl">
+                   <li><span class="name"><span style="color: #c32225">*&nbsp;</span>姓名:</span><input type="text"/></li>
+                   <li><span class="name"><span style="color: #c32225">*&nbsp;</span>电话:</span><input type="text"/></li>
+                   <li><span class="name"><span style="color: #c32225">*&nbsp;</span>所在城市:</span><input type="text"/></li>
+                   <li><span class="name">邮箱:</span><input type="email"/></li>
+                 </ul>
+                 <div class="stepSubmit">立即提交</div>
+             </div>
+         </div>
+      </div>
       <!--常见问题-->
       <div id="cjwt" class="problemContain">
           <img src="static/changjianwenti.png" class="problemImg">
-          <div class="title">常见问题</div>
+          <div class="titleX" style=" margin-top: 46px;">常见问题</div>
           <div class="problemScroll">
              <div class="problemTitle">
                  <img src="static/dian.png" />
@@ -143,40 +265,17 @@
         </ul>
         <div class="submit">立即提交</div>
       </div>
-      <!--底部-->
-      <div class="footer">
-         <div style="width: 1200px;height: 160px;padding-top: 35px">
-            <img src="static/dingbuLOGO.png" class="footerLeft">
-            <div class="footerCenter">
-               <div class="centerA">关于我们<span>|</span><span>保密说明</span></div>
-               <div class="centerB" style="margin-top: 56px;">联系电话:0577-86121121<span style="margin-left: 30px">
-                 传真:0577-5557
-               </span></div>
-              <div class="centerB" style="margin-top: 16px;">公司地址:浙江省温州市文昌路高新技术园D幢4楼、蒲中路11号温商中心4楼</div>
-            </div>
-            <ul class="footerRight">
-              <li>
-                <img src="static/qingchuangtongchengerweima.png">
-                <div>氢创同城公众号</div>
-              </li>
-              <li>
-                <img src="static/qingchuangshe.png">
-                <div>氢创社公众号</div>
-              </li>
-              <li>
-                <img src="static/weibo.png">
-                <div>微博</div>
-              </li>
-            </ul>
-         </div>
-      </div>
+      <foot></foot>
   </div>
 </template>
 <script>
   import centerContainer from '../components/centerContainer.vue'
+  import foot from '../components/foot.vue'
   export default {
     data(){
-    return {
+      return {
+        stepHoverIndex:0,
+        stepIndex:6,
         events:[
           {bigCircle:1,year:'2017'},
           {bigCircle:0,dayLeft:1,year:'2017',Mouth:'Apr',day:'/01',title:"氢创社新版微信平台上线",detail:"用更专业的更完善的态度服务天使投资人和创业者"},
@@ -187,8 +286,14 @@
         ]
       }
     },
+    methods:{
+      testB(){
+        console.log(123)
+      }
+    },
     components:{
-        centerContainer
+        centerContainer,
+        foot
     }
   }
 </script>
