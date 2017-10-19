@@ -4,7 +4,7 @@
     <div style="width: 1200px;height: 160px;padding-top: 35px">
       <img src="static/dingbuLOGO.png" class="footerLeft">
       <div class="footerCenter">
-        <div class="centerA">关于我们<span>|</span><span>保密说明</span></div>
+        <div class="centerA"><router-link to="about" tag="span"  style="margin: 0">关于我们</router-link><span>|</span><router-link to="secrecy" tag="span" >保密说明</router-link></div>
         <div class="centerB" style="margin-top: 56px;">联系电话:0577-86121121<span style="margin-left: 30px">
                  传真:0577-5557
                </span></div>

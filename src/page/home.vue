@@ -6,15 +6,18 @@
         <div class="topCol">
           <img src="static/dibuLOGO.png">
           <ul>
-            <li><a href="#qcjj" class="select">同城简介</a></li>
+            <li><a href="#qcjj">同城简介</a></li>
             <li><a href="#jjwt">解决问题</a></li>
-            <li><a href="#dsj">价值提供</a></li>
-            <li><a href="#qcjj">已加合伙人</a></li>
+            <li><a href="#dsj">大事记</a></li>
+            <li><a href="#qcjj">价值提供</a></li>
             <li><a href="#cjwt">常见问题</a></li>
           </ul>
         </div>
-        <img src="static/diandian.png" class="diandian">
-        <img src="static/tieLOGO.png" class="logo">
+        <div style="width: 1200px;position: relative;">
+          <img src="static/diandian.png" class="diandian">
+          <img src="static/tieLOGO.png" class="logo">
+        </div>
+
         <div class="title">氢创同城</div>
         <div class="describe">项目投融资服务 \ 项目培育孵化 \ 新媒体服务 \ 项目对接活动服务 \ 全国100个分社</div>
         <div class="selectDiv">
@@ -49,7 +52,7 @@
       </div>
       <!--解决问题-->
       <div id="jjwt" class="resolveContain">
-          <div class="resolve">氢创投资为您解决了哪些问题</div>
+          <div class="titleX">氢创投资为您解决了哪些问题</div>
           <ul class="resolveUl">
               <li>
                 <img src="static/chuangyezhe.png">
@@ -90,7 +93,7 @@
        </div>
      </div>
       <!--加入步骤-->
-      <div>
+      <div style="min-width: 1200px">
         <div class="titleX" style=" margin-top: 135px;">城市合伙人招募，城市合伙人招募</div>
          <div style="height: 760px; min-width: 1002px;">
              <div @mouseout="stepHoverIndex=7"  class="stepMenu">
@@ -275,7 +278,7 @@
     data(){
       return {
         stepHoverIndex:0,
-        stepIndex:6,
+        stepIndex:1,
         events:[
           {bigCircle:1,year:'2017'},
           {bigCircle:0,dayLeft:1,year:'2017',Mouth:'Apr',day:'/01',title:"氢创社新版微信平台上线",detail:"用更专业的更完善的态度服务天使投资人和创业者"},
