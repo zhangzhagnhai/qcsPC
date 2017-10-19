@@ -2,32 +2,40 @@
   <div>
       <!--头部导航-->
       <div class="topContain">
-        <img src="static/banner1.png" class="topImg">
+        <div style="position: absolute; top:0; left: 0;  z-index: -1; width: 100%; min-width: 1200px; overflow: hidden ">
+          <ul :style="{marginLeft:-oneWidth*(bgIndex-1)+'px'}" :class="target?'noAction':''">
+            <li :style="{width:oneWidth+'px'}"><img src="static/banner1.jpg" class="topImg" :style="{width:oneWidth+'px'}"></li>
+            <li :style="{width:oneWidth+'px'}"><img src="static/banner2.jpg" class="topImg" :style="{width:oneWidth+'px'}"></li>
+            <li :style="{width:oneWidth+'px'}"><img src="static/banner3.jpg" class="topImg" :style="{width:oneWidth+'px'}"></li>
+            <li :style="{width:oneWidth+'px'}"><img src="static/banner1.jpg" class="topImg" :style="{width:oneWidth+'px'}"></li>
+            <li :style="{width:oneWidth+'px'}"><img src="static/banner2.jpg" class="topImg" :style="{width:oneWidth+'px'}"></li>
+            <li :style="{width:oneWidth+'px'}"><img src="static/banner3.jpg" class="topImg" :style="{width:oneWidth+'px'}"></li>
+          </ul>
+        </div>
         <div class="topCol">
           <img src="static/dibuLOGO.png">
           <ul>
-            <li><a href="#qcjj">同城简介</a></li>
-            <li><a href="#jjwt">解决问题</a></li>
-            <li><a href="#dsj">大事记</a></li>
-            <li><a href="#qcjj">价值提供</a></li>
-            <li><a href="#cjwt">常见问题</a></li>
+            <li><a href="javascript:void(0)" @click="goAnchor('#anchor-1')">同城简介</a></li>
+            <li><a href="javascript:void(0)" @click="goAnchor('#anchor-2')">解决问题</a></li>
+            <li><a href="javascript:void(0)" @click="goAnchor('#anchor-3')">大事记</a></li>
+            <li><a href="javascript:void(0)" @click="goAnchor('#anchor-4')">价值提供</a></li>
+            <li><a href="javascript:void(0)" @click="goAnchor('#anchor-5')">常见问题</a></li>
           </ul>
         </div>
-        <div style="width: 1200px;position: relative;">
+    <!--    <div style="width: 1200px;position: relative;">
           <img src="static/diandian.png" class="diandian">
           <img src="static/tieLOGO.png" class="logo">
         </div>
-
         <div class="title">氢创同城</div>
-        <div class="describe">项目投融资服务 \ 项目培育孵化 \ 新媒体服务 \ 项目对接活动服务 \ 全国100个分社</div>
+        <div class="describe">项目投融资服务 \ 项目培育孵化 \ 新媒体服务 \ 项目对接活动服务 \ 全国100个分社</div>-->
         <div class="selectDiv">
-          <a class="select"></a>
-          <a></a>
-          <a></a>
+          <a :class="bgIndex%3==1?'select':''" @click="resetAnimate(1)"></a>
+          <a :class="bgIndex%3==2?'select':''" @click="resetAnimate(2)"></a>
+          <a :class="bgIndex%3==0?'select':''" @click="resetAnimate(3)"></a>
         </div>
       </div>
       <!--氢创简介-->
-      <div id="qcjj" style="margin-bottom: 135px;">
+      <div id="anchor-1" style="margin-bottom: 135px;">
         <div class="intro">氢创投资，携手您进入新商业新连锁时代</div>
         <p class="introduce">氢创投资（浙江氢创投资有限公司）成立于2015年，专注于种子、天使期项目孵化及股权投融资。</p>
         <p class="introduce">自2015年开始，氢创组织近百场大型活动峰会、项目路演、论坛、沙龙、大赛，有超过百位一线投资人列席，氢创自媒体影响近五百万人次。</p>
@@ -51,7 +59,7 @@
         </ul>
       </div>
       <!--解决问题-->
-      <div id="jjwt" class="resolveContain">
+      <div id="anchor-2" class="resolveContain">
           <div class="titleX">氢创投资为您解决了哪些问题</div>
           <ul class="resolveUl">
               <li>
@@ -82,7 +90,7 @@
           </ul>
       </div>
      <!--大事记-->
-      <div id="dsj" class="eventContain">
+      <div id="anchor-3" class="eventContain">
        <div class="titleX" style="margin-bottom: 93px">大事记大事记大事记大事记</div>
        <div v-for="event in events">
           <div v-if="event.bigCircle" class="bigCircle">
@@ -93,7 +101,7 @@
        </div>
      </div>
       <!--加入步骤-->
-      <div style="min-width: 1200px">
+      <div id="anchor-4" style="min-width: 1200px">
         <div class="titleX" style=" margin-top: 135px;">城市合伙人招募，城市合伙人招募</div>
          <div style="height: 760px; min-width: 1002px;">
              <div @mouseout="stepHoverIndex=7"  class="stepMenu">
@@ -205,17 +213,17 @@
                 <img src="static/shenqingjiaru.png" style="position: absolute; width: 562px; height: 498px; margin: 0 auto; top:0; left: 0; right: 0;">
                  <div class="stepAddTitle">申请加入</div>
                  <ul class="stepAddUl">
-                   <li><span class="name"><span style="color: #c32225">*&nbsp;</span>姓名:</span><input type="text"/></li>
-                   <li><span class="name"><span style="color: #c32225">*&nbsp;</span>电话:</span><input type="text"/></li>
-                   <li><span class="name"><span style="color: #c32225">*&nbsp;</span>所在城市:</span><input type="text"/></li>
-                   <li><span class="name">邮箱:</span><input type="email"/></li>
+                   <li><span class="name"><span style="color: #c32225">*&nbsp;</span>姓名:</span><input type="text" v-model="userInfo.name"/></li>
+                   <li><span class="name"><span style="color: #c32225">*&nbsp;</span>电话:</span><input type="text"  v-model="userInfo.mobile"/></li>
+                   <li><span class="name"><span style="color: #c32225">*&nbsp;</span>所在城市:</span><input type="text"  v-model="userInfo.location"/></li>
+                   <li><span class="name">公司名称:</span><input type="text"  v-model="userInfo.company"/></li>
                  </ul>
                  <div class="stepSubmit">立即提交</div>
              </div>
          </div>
       </div>
       <!--常见问题-->
-      <div id="cjwt" class="problemContain">
+      <div id="anchor-5" class="problemContain">
           <img src="static/changjianwenti.png" class="problemImg">
           <div class="titleX" style=" margin-top: 46px;">常见问题</div>
           <div class="problemScroll">
@@ -261,12 +269,12 @@
         <img src="static/chengshihehuorenzhaomu.png">
         <div class="addTitle">城市合伙人招募</div>
         <ul class="addUl">
-          <li><span class="name"><span style="color: #c32225">*&nbsp;</span>姓名:</span><input type="text"/></li>
-          <li><span class="name"><span style="color: #c32225">*&nbsp;</span>电话:</span><input type="text"/></li>
-          <li><span class="name"><span style="color: #c32225">*&nbsp;</span>所在城市:</span><input type="text"/></li>
-          <li><span class="name">邮箱:</span><input type="email"/></li>
+          <li><span class="name"><span style="color: #c32225">*&nbsp;</span>姓名:</span><input type="text"  v-model="userInfox.name"/></li>
+          <li><span class="name"><span style="color: #c32225">*&nbsp;</span>电话:</span><input type="text"  v-model="userInfox.mobile"/></li>
+          <li><span class="name"><span style="color: #c32225">*&nbsp;</span>所在城市:</span><input type="text"  v-model="userInfox.location"/></li>
+          <li><span class="name">公司名称:</span><input type="text"  v-model="userInfox. company"/></li>
         </ul>
-        <div class="submit">立即提交</div>
+        <div @click="submitA" class="submit">立即提交</div>
       </div>
       <foot></foot>
   </div>
@@ -279,6 +287,23 @@
       return {
         stepHoverIndex:0,
         stepIndex:1,
+        bgIndex:1,
+        oneWidth:1920,
+        target:false,
+        userInfo:{
+          name:"",
+          mobile:"",
+          location:"",
+          company:"",
+          resource:""
+        },
+        userInfox:{
+          name:"",
+          mobile:"",
+          location:"",
+          company:"",
+          resource:""
+        },
         events:[
           {bigCircle:1,year:'2017'},
           {bigCircle:0,dayLeft:1,year:'2017',Mouth:'Apr',day:'/01',title:"氢创社新版微信平台上线",detail:"用更专业的更完善的态度服务天使投资人和创业者"},
@@ -286,10 +311,72 @@
           {bigCircle:1,year:'2016'},
           {bigCircle:0,dayLeft:1,year:'2016',Mouth:'Oct',day:'/11',title:"首个平台上线项目OISation成功路演",detail:"首个在氢创社平台进行路演的项目,超80位天使投资人到场观看"},
           {bigCircle:0,dayLeft:0,year:'2016',Mouth:'Sep',day:'/28',title:"新媒体成立",detail:"打造氢创社自己的扩音器，打造氢创社自己的扩音器"}
-        ]
+        ],
+        timer:''
+      }
+    },
+    created(){
+      this.init();
+      this.oneWidth=document.body.clientWidth;
+      if(this.oneWidth<1200)
+        this.oneWidth=1200;
+      var _this=this;
+      window.onresize=function(){
+        _this.oneWidth=document.body.clientWidth;
+        if(_this.oneWidth<1200)
+          _this.oneWidth=1200;
       }
     },
     methods:{
+      goAnchor(selector) {
+        var anchor = this.$el.querySelector(selector);
+        document.documentElement.scrollTop = anchor.offsetTop;
+      },
+      resetAnimate(index){
+        this.bgIndex=index;
+        this.init();
+      },
+      init(){
+        var _this=this;
+        clearInterval(this.timer)
+        this.timer=setInterval(function(){
+          _this.bgIndex+=1;
+          if(_this.bgIndex>3){
+            setTimeout(function(){
+              if(_this.bgIndex>3){
+                _this.target=true;
+                _this.bgIndex=_this.bgIndex-=3;
+                setTimeout(function(){
+                  _this.target=false;
+                },100)
+              }
+            },2000)
+          }
+        },5000)
+      },
+      submitA(){
+        console.log(123)
+        var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
+        if(!this.userInfox.name){
+          alert("请输入正确您的姓名")
+          return;
+        }
+        if(!this.userInfox.location){
+          alert("请输入正确您所在的城市")
+          return;
+        }
+        if(!myreg.test(this.userInfox.mobile)){
+          alert("请输入正确的手机号")
+          return;
+        }
+        $.getJSON("http://laravel.hcsoo.com/api/city/fensheApply",this.userInfox).then(function (response) {
+          if(response.code){
+            alert("提交成功");
+          }else {
+            alert(response.msg);
+          }
+        })
+      },
       testB(){
         console.log(123)
       }
@@ -297,7 +384,11 @@
     components:{
         centerContainer,
         foot
+    },mounted(){
+      this.select = '#anchor-'+this.$route.query.select;
+      this.goAnchor(this.select);
     }
+
   }
 </script>
 <style src="../assets/css/home.css" scoped>

@@ -1,15 +1,22 @@
 <template>
     <div>
       <div class="topContain" style="height: 300px">
-        <img src="static/neiye.png" class="topImg" style="height: 300px">
+        <img src="static/neiye.png" class="topImg" style="height: 300px; position: absolute; width: 100%; left: 0; right: 0">
         <div class="topCol">
           <img src="static/dibuLOGO.png">
-          <ul>
+       <!--   <ul>
             <li><a href="home#qcjj">同城简介</a></li>
             <li><a href="home#jjwt">解决问题</a></li>
             <li><a href="home#dsj">大事记</a></li>
             <li><a href="home#qcjj">价值提供</a></li>
             <li><a href="home#cjwt">常见问题</a></li>
+          </ul>-->
+          <ul>
+            <li><router-link :to="{name:'home',query:{select:1}}">同城简介</router-link></li>
+            <li><router-link :to="{name:'home',query:{select:2}}">解决问题</router-link></li>
+            <li><router-link :to="{name:'home',query:{select:3}}">大事记</router-link></li>
+            <li><router-link :to="{name:'home',query:{select:4}}">价值提供</router-link></li>
+            <li><router-link :to="{name:'home',query:{select:5}}">常见问题</router-link></li>
           </ul>
         </div>
       </div>
