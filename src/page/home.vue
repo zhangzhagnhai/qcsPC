@@ -91,7 +91,7 @@
       </div>
      <!--大事记-->
       <div id="anchor-3" class="eventContain">
-       <div class="titleX" style="margin-bottom: 93px">大事记大事记大事记大事记</div>
+       <div class="titleX" style="margin-bottom: 93px">氢创投资大事记</div>
        <div v-for="event in events">
           <div v-if="event.bigCircle" class="bigCircle">
             <div>{{event.year}}</div>
@@ -101,8 +101,8 @@
        </div>
      </div>
       <!--加入步骤-->
-      <div id="anchor-4" style="min-width: 1200px">
-        <div class="titleX" style=" margin-top: 135px;">城市合伙人招募，城市合伙人招募</div>
+      <div id="anchor-4" style="min-width: 1200px; background-color: #f9f9f9; ">
+        <div class="titleX" style=" padding-top: 135px;">城市合伙人招募，城市合伙人招募</div>
          <div style="height: 760px; min-width: 1002px;">
              <div @mouseout="stepHoverIndex=7"  class="stepMenu">
                <div :class='stepHoverIndex==1||stepIndex==1?"select":""' @mouseover="stepHoverIndex=1"  @click="stepIndex=1">为什么加入</div>
@@ -218,7 +218,7 @@
                    <li><span class="name"><span style="color: #c32225">*&nbsp;</span>所在城市:</span><input type="text"  v-model="userInfo.location"/></li>
                    <li><span class="name">公司名称:</span><input type="text"  v-model="userInfo.company"/></li>
                  </ul>
-                 <div class="stepSubmit">立即提交</div>
+                 <div @click="submit(0)" class="stepSubmit">立即提交</div>
              </div>
          </div>
       </div>
@@ -274,7 +274,40 @@
           <li><span class="name"><span style="color: #c32225">*&nbsp;</span>所在城市:</span><input type="text"  v-model="userInfox.location"/></li>
           <li><span class="name">公司名称:</span><input type="text"  v-model="userInfox. company"/></li>
         </ul>
-        <div @click="submitA" class="submit">立即提交</div>
+        <div @click="submit(1)" class="submit">立即提交</div>
+      </div>
+
+      <!--弹窗-->
+      <div v-if="showMC" class="mengceng">
+          <div class="mengcengContainer">
+              <div class="col">
+                 <div class="cols">
+                   <img src="static/tijiaochenggong.png" />
+                   <span>提交成功</span>
+                 </div>
+              </div>
+              <div class="colBody">
+                申请已提交成功，2个工作日内会有工作人员联系您。
+              </div>
+              <div @click="showMC=false"  class="colButton">知道了</div>
+          </div>
+          <div @click="showMC=false" class="mengcengBg"></div>
+
+      </div>
+
+      <div class="right">
+        <div class="imgContainer">
+          <img @mouseover="ceyiSelect=1" @mouseout="ceyiSelect=0"  :src="this.ceyiSelect?'static/cesan.png':'static/ceyi.png'" >
+          <img v-if="ceyiSelect==1" src="static/cesi.png" style="position: absolute; left: -140px; top:0px;">
+        </div>
+        <div class="imgContainer" style=" margin-top: 10px;">
+          <img @mouseover="ceerSelect=1" @mouseout="ceerSelect=0"  :src="this.ceerSelect?'static/cewu.png':'static/ceer.png'" >
+          <img v-if="ceerSelect==1" src="static/ceqi.png" style="position: absolute; left: -275px; top:0px; ">
+          <div v-if="ceerSelect==1" class="row">
+              <div>联系电话：13957756423</div>
+              <div>工作时间：周一至周六 9:00-17:30</div>
+          </div>
+        </div>
       </div>
       <foot></foot>
   </div>
@@ -289,7 +322,10 @@
         stepIndex:1,
         bgIndex:1,
         oneWidth:1920,
+        ceyiSelect:0,
+        ceerSelect:0,
         target:false,
+        showMC:false,
         userInfo:{
           name:"",
           mobile:"",
@@ -330,7 +366,11 @@
     methods:{
       goAnchor(selector) {
         var anchor = this.$el.querySelector(selector);
-        document.documentElement.scrollTop = anchor.offsetTop;
+        if(anchor){
+          document.documentElement.scrollTop = anchor.offsetTop;
+          document.body.scrollTop = anchor.offsetTop;
+        }
+
       },
       resetAnimate(index){
         this.bgIndex=index;
@@ -354,24 +394,31 @@
           }
         },5000)
       },
-      submitA(){
-        console.log(123)
+      submit(para){
+        console.log(para)
+        var data;
+        var _this=this;
+        if(para){
+          data=this.userInfox;
+        }else{
+          data=this.userInfo;
+        }
         var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
-        if(!this.userInfox.name){
+        if(!data.name){
           alert("请输入正确您的姓名")
           return;
         }
-        if(!this.userInfox.location){
+        if(!data.location){
           alert("请输入正确您所在的城市")
           return;
         }
-        if(!myreg.test(this.userInfox.mobile)){
+        if(!myreg.test(data.mobile)){
           alert("请输入正确的手机号")
           return;
         }
-        $.getJSON("http://laravel.hcsoo.com/api/city/fensheApply",this.userInfox).then(function (response) {
+        $.getJSON("http://laravel.hcsoo.com/api/city/fensheApply",data).then(function (response) {
           if(response.code){
-            alert("提交成功");
+            _this.showMC=true;
           }else {
             alert(response.msg);
           }

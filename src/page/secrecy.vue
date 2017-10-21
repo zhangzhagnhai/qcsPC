@@ -3,7 +3,9 @@
       <div class="topContain" style="height: 300px">
         <img src="static/neiye.png" class="topImg" style="height: 300px; position: absolute; width: 100%; left: 0; right: 0">
         <div class="topCol">
-          <img src="static/dibuLOGO.png">
+          <router-link to="home">
+            <img src="static/dibuLOGO.png">
+           </router-link>
           <!--   <ul>
              <li><a href="home#qcjj">同城简介</a></li>
              <li><a href="home#jjwt">解决问题</a></li>
