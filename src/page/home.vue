@@ -296,12 +296,12 @@
       </div>
 
       <div class="right">
-        <div class="imgContainer">
-          <img @mouseover="ceyiSelect=1" @mouseout="ceyiSelect=0"  :src="this.ceyiSelect?'static/cesan.png':'static/ceyi.png'" >
+        <div @mouseover="ceyiSelect=1" @mouseout="ceyiSelect=0"  class="imgContainer">
+          <img :src="this.ceyiSelect?'static/cesan.png':'static/ceyi.png'" >
           <img v-if="ceyiSelect==1" src="static/cesi.png" style="position: absolute; left: -140px; top:0px;">
         </div>
-        <div class="imgContainer" style=" margin-top: 10px;">
-          <img @mouseover="ceerSelect=1" @mouseout="ceerSelect=0"  :src="this.ceerSelect?'static/cewu.png':'static/ceer.png'" >
+        <div @mouseover="ceerSelect=1" @mouseout="ceerSelect=0"  class="imgContainer" style=" margin-top: 10px;">
+          <img :src="this.ceerSelect?'static/cewu.png':'static/ceer.png'" >
           <img v-if="ceerSelect==1" src="static/ceqi.png" style="position: absolute; left: -275px; top:0px; ">
           <div v-if="ceerSelect==1" class="row">
               <div>联系电话：13957756423</div>
