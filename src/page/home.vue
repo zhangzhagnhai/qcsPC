@@ -34,6 +34,19 @@
           <a :class="bgIndex%3==0?'select':''" @click="resetAnimate(3)"></a>
         </div>
       </div>
+      <!--固定导航-->
+      <div v-if="showMenu" class="nav">
+        <div class="topCol">
+          <img src="static/dibuLOGO.png" />
+          <ul>
+            <li><a href="javascript:void(0)" @click="goAnchor('#anchor-1')">同城简介</a></li>
+            <li><a href="javascript:void(0)" @click="goAnchor('#anchor-2')">解决问题</a></li>
+            <li><a href="javascript:void(0)" @click="goAnchor('#anchor-3')">大事记</a></li>
+            <li><a href="javascript:void(0)" @click="goAnchor('#anchor-4')">价值提供</a></li>
+            <li><a href="javascript:void(0)" @click="goAnchor('#anchor-5')">常见问题</a></li>
+          </ul>
+        </div>
+      </div>
       <!--氢创简介-->
       <div id="anchor-1" style="margin-bottom: 135px;">
         <div class="intro">氢创投资，携手您进入新商业新连锁时代</div>
@@ -326,6 +339,7 @@
         ceerSelect:0,
         target:false,
         showMC:false,
+        showMenu:false,
         userInfo:{
           name:"",
           mobile:"",
@@ -434,6 +448,15 @@
     },mounted(){
       this.select = '#anchor-'+this.$route.query.select;
       this.goAnchor(this.select);
+      var _this=this;
+      window.onscroll = function () {
+         if(document.body.scrollTop>=945||document.documentElement.scrollTop>=945){
+           _this.showMenu=true;
+         }
+         else{
+           _this.showMenu=false;
+         }
+      }
     }
 
   }

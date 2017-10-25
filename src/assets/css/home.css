@@ -10,7 +10,13 @@ div{margin: 0 auto}
 .topCol ul{width: 475px;height: 116px; float: right; border-bottom: 1px solid #dddddd;}
 .topCol ul li{float: left; width:95px;}
 .topCol ul li a{ font-size: 16px; height: 16px; line-height: 16px; padding: 70px 0 30px; color: #ffffff}
-.topCol ul li a:hover,.topCol ul li .select{ font-size: 16px; height: 16px; line-height: 16px; padding: 70px 0 30px; color: #303641;background-color: #99d4ef; }
+.topCol ul li a:hover,.topCol ul li .select{ font-size: 16px; height: 16px; line-height: 16px;color: #303641;background-color: #99d4ef; }
+
+.nav{position: fixed;top:0; height: 70px; width: 100%; min-width: 1200px; background-color: #2f3542; z-index: 9999; }
+.nav .topCol{height: 70px; font-size: 0}
+.nav .topCol img{margin-top: 13px}
+.nav .topCol ul{border: none}
+.nav .topCol ul li a{padding: 27px 0; }
 .diandian{position: absolute;  width: 630px; top:201px;z-index: 99; left:0; right: 0; margin: 0 auto;}
 .logo{position: absolute;  width: 325px; top:270px;z-index: 99; left:0; right: 0; margin: 0 auto;}
 .title{position: relative;margin-top: 606px; overflow: hidden; color: white; font-size: 26px; z-index: 100}
