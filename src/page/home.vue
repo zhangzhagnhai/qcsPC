@@ -39,11 +39,11 @@
         <div class="topCol">
           <img src="static/dibuLOGO.png" />
           <ul>
-            <li><a href="javascript:void(0)" @click="goAnchor('#anchor-1')">同城简介</a></li>
-            <li><a href="javascript:void(0)" @click="goAnchor('#anchor-2')">解决问题</a></li>
-            <li><a href="javascript:void(0)" @click="goAnchor('#anchor-3')">大事记</a></li>
-            <li><a href="javascript:void(0)" @click="goAnchor('#anchor-4')">价值提供</a></li>
-            <li><a href="javascript:void(0)" @click="goAnchor('#anchor-5')">常见问题</a></li>
+            <li><a :class="menuSelect==1?'select':''" href="javascript:void(0)" @click="goAnchor('#anchor-1')">同城简介</a></li>
+            <li><a :class="menuSelect==2?'select':''" href="javascript:void(0)" @click="goAnchor('#anchor-2')">解决问题</a></li>
+            <li><a :class="menuSelect==3?'select':''" href="javascript:void(0)" @click="goAnchor('#anchor-3')">大事记</a></li>
+            <li><a :class="menuSelect==4?'select':''" href="javascript:void(0)" @click="goAnchor('#anchor-4')">价值提供</a></li>
+            <li><a :class="menuSelect==5?'select':''" href="javascript:void(0)" @click="goAnchor('#anchor-5')">常见问题</a></li>
           </ul>
         </div>
       </div>
@@ -116,7 +116,7 @@
       <!--加入步骤-->
       <div id="anchor-4" style="min-width: 1200px; background-color: #f9f9f9; ">
         <div class="titleX" style=" padding-top: 135px;">城市合伙人招募，城市合伙人招募</div>
-         <div style="height: 760px; min-width: 1002px;">
+         <div style="height: 690px; min-width: 1002px;">
              <div @mouseout="stepHoverIndex=7"  class="stepMenu">
                <div :class='stepHoverIndex==1||stepIndex==1?"select":""' @mouseover="stepHoverIndex=1"  @click="stepIndex=1">为什么加入</div>
                <div :class='stepHoverIndex==2||stepIndex==2?"select":""' @mouseover="stepHoverIndex=2"  @click="stepIndex=2">合作模式</div>
@@ -334,12 +334,14 @@
         stepHoverIndex:0,
         stepIndex:1,
         bgIndex:1,
+        menuSelect:1,
         oneWidth:1920,
         ceyiSelect:0,
         ceerSelect:0,
         target:false,
         showMC:false,
         showMenu:false,
+        domTopList:[],
         userInfo:{
           name:"",
           mobile:"",
@@ -380,6 +382,8 @@
     methods:{
       goAnchor(selector) {
         var anchor = this.$el.querySelector(selector);
+        var index=selector.split("-")[1];
+        this.menuSelect=index;
         if(anchor){
           document.documentElement.scrollTop = anchor.offsetTop;
           document.body.scrollTop = anchor.offsetTop;
@@ -449,8 +453,26 @@
       this.select = '#anchor-'+this.$route.query.select;
       this.goAnchor(this.select);
       var _this=this;
+      this.domTopList=[];
+      for(var i=1;i<=5;i++){
+        this.domTopList[i-1]=$("#anchor-"+i).offset().top-70;
+      }
       window.onscroll = function () {
-         if(document.body.scrollTop>=945||document.documentElement.scrollTop>=945){
+        /*945,116*/
+         var currentTop= document.body.scrollTop||document.documentElement.scrollTop;
+           for(var i=0;i<5;i++){
+             if(currentTop<_this.domTopList[0]){
+               _this.menuSelect=1;
+               break;
+             }else if(currentTop>_this.domTopList[i]&&currentTop<_this.domTopList[i+1]){
+              _this.menuSelect=i+1;
+              break;
+            }else if(currentTop>_this.domTopList[4]){
+               _this.menuSelect=5;
+               break;
+             }
+          }
+         if(currentTop>=945){
            _this.showMenu=true;
          }
          else{
