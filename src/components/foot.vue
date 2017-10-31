@@ -6,7 +6,7 @@
       <div class="footerCenter">
         <div class="centerA"><router-link to="about" tag="span"  style="margin: 0">关于我们</router-link><span>|</span><router-link to="secrecy" tag="span" >保密说明</router-link></div>
         <div class="centerB" style="margin-top: 56px;">联系电话:0577-86121121<span style="margin-left: 30px">
-                 传真:0577-5557
+              13957756423
                </span></div>
         <div class="centerB" style="margin-top: 16px;">公司地址:浙江省温州市文昌路高新技术园D幢4楼、蒲中路11号温商中心4楼</div>
       </div>

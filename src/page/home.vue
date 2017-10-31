@@ -49,9 +49,9 @@
       </div>
       <!--氢创简介-->
       <div id="anchor-1" style="margin-bottom: 135px;">
-        <div class="intro">氢创投资，携手您进入新商业新连锁时代</div>
+        <div class="intro">氢创投资与您携手进入新商业新连锁时代</div>
         <p class="introduce">氢创投资（浙江氢创投资有限公司）成立于2015年，专注于种子、天使期项目孵化及股权投融资。</p>
-        <p class="introduce">自2015年开始，氢创组织近百场大型活动峰会、项目路演、论坛、沙龙、大赛，有超过百位一线投资人列席，氢创自媒体影响近五百万人次。</p>
+        <p class="introduce">自2015年开始，氢创组织近百场大型活动峰会、项目路演、论坛、沙龙、大赛，有超过百位一线投资人列席，氢创自媒体影响近500万人次。</p>
         <p class="introduce">目前公司直投项目20余个，近200个项目投融资对接展示，并已在北京、上海、长沙、杭州设立分社。</p>
         <h2>氢创投资旗下三大核心品牌</h2>
         <ul class="introduceUl">
@@ -73,32 +73,32 @@
       </div>
       <!--解决问题-->
       <div id="anchor-2" class="resolveContain">
-          <div class="titleX">氢创投资为您解决了哪些问题</div>
+          <div class="titleX">氢创投资为您解决哪些问题</div>
           <ul class="resolveUl">
               <li>
                 <img src="static/chuangyezhe.png">
                 <h3>创业者</h3>
-                <p>提供良好的项目平台<br>提供良好的项目平台提供良好</p>
+                <p>提供项目梳理、品牌战略规划、<br>股权结构设计、<br>加盟招商政策制定等服务。</p>
               </li>
               <li>
                 <img src="static/xiangmu.png">
                 <h3>项目</h3>
-                <p>获得资金、资源、产业链、<br>加盟招商合作、品牌推广等</p>
+                <p>获得对接资本、资源、<br>产业链、加盟招商合作、<br>品牌推广等服务</p>
               </li>
             <li>
               <img src="static/zijinfang.png">
-              <h3>资金方</h3>
-              <p>投资到优质项目<br>投资到优质项目投资到优</p>
+              <h3>资本方</h3>
+              <p>投资到收益可观、<br>风险可控的优质项目</p>
             </li>
             <li>
               <img src="static/cahnyelian.png">
               <h3>产业链</h3>
-              <p>促进多方资源对接，<br>租金产业链的连接和提升</p>
+              <p>促进多方资源对接，<br>整合产业链资源，提升效率，<br>降低成本</p>
             </li>
             <li>
               <img src="static/chuangyefuwu.png">
               <h3>创业服务</h3>
-              <p>为第三方服务企业<br>的机构提供优质对象</p>
+              <p>为服务企业的第三方机构<br>提供优质对象</p>
             </li>
           </ul>
       </div>
@@ -115,7 +115,7 @@
      </div>
       <!--加入步骤-->
       <div id="anchor-4" style="min-width: 1200px; background-color: #f9f9f9; ">
-        <div class="titleX" style=" padding-top: 135px;">城市合伙人招募，城市合伙人招募</div>
+        <div class="titleX" style=" padding-top: 135px;">城市合伙人招募</div>
          <div style="height: 690px; min-width: 1002px;">
              <div @mouseout="stepHoverIndex=7"  class="stepMenu">
                <div :class='stepHoverIndex==1||stepIndex==1?"select":""' @mouseover="stepHoverIndex=1"  @click="stepIndex=1">为什么加入</div>
@@ -242,39 +242,22 @@
           <div class="problemScroll">
              <div class="problemTitle">
                  <img src="static/dian.png" />
-                 <div>券商理财是什么？</div>
+                 <div>氢创投资有哪几大业务模块？</div>
              </div>
-             <p>券商理财是指证券公司管理，并且在中国证监会备案过的理财产品，产品募集的资金全部都托管在指定银行监管，资金非常安全。而且其风险低，投资者承担的风险小。</p>
+             <p>氢创投资（浙江氢创投资有限公司），专注于种子、天使期项目孵化及股权投融资，氢创投资旗下有三大核心品牌：氢创社、氢创同城、氢创资本，分别提供新媒体服务、全国分社服务、“百城千场”项目对接会服务、以及项目投融资及培育服务。</p>
 
             <div class="problemTitle">
               <img src="static/dian.png" />
-              <div>什么时候起息？</div>
+              <div>氢创投资在新商业新连锁的创业孵化与投融资服务方面有哪些优势？</div>
             </div>
-            <p>在产品募集结束日后的下一个工作日开始计息（T+1日）。计息第二天推送前一天收益。</p>
+            <p>核心创始团队，在互联网、零售连锁领域拥有10余年创业经验和丰富的创投资源，并已形成了一套成熟的项目孵化培育服务体系和标准。</p>
 
             <div class="problemTitle">
               <img src="static/dian.png" />
-              <div>取现什么时候能到账？</div>
+              <div>氢创投资目前有哪些成功案例？</div>
             </div>
-            <p>到期日赎回，本金和收益会于3个工作日内，转到您的原支付账户。</p>
+            <p>投资合作的案例有哇哈哈宗盛智能、妙寄、婆婆妈妈生鲜网、盛才教育托管、艳后医美连锁、阿青龙虾连锁、同人书院、逗哈科技、千朵安亲等……</p>
 
-            <div class="problemTitle">
-              <img src="static/dian.png" />
-              <div>再次购买的起购金额？</div>
-            </div>
-            <p>券商理财是指证券公司管理，并且在中国证监会备案过的理财产品，产品募集的资金全部都托管在指定银行监管，资金非常安全。而且其风险低，投资者承担的风险小。</p>
-
-            <div class="problemTitle">
-              <img src="static/dian.png" />
-              <div>为什么有时理财周期与产品名称显示理财天数不一致？</div>
-            </div>
-            <p>若申购日或赎回日赶到法定假日无法进行操作，故实际理财期限会因此缩短或延长几天，计息时间与实际理财期限一致。</p>
-
-            <div class="problemTitle">
-              <img src="static/dian.png" />
-              <div>为什么有时理财周期与产品名称显示理财天数不一致？</div>
-            </div>
-            <p>到期日赎回，本金和收益会于3个工作日内，转到您的原支付账户。</p>
           </div>
       </div>
       <!--加入氢创同城-->
@@ -358,11 +341,16 @@
         },
         events:[
           {bigCircle:1,year:'2017'},
-          {bigCircle:0,dayLeft:1,year:'2017',Mouth:'Apr',day:'/01',title:"氢创社新版微信平台上线",detail:"用更专业的更完善的态度服务天使投资人和创业者"},
-          {bigCircle:0,dayLeft:0,year:'2017',Mouth:'Apr',day:'/08',title:"首届(中国)产业与金融资本论坛成功举办",detail:"哇哈哈早起创始人之一宗泽后、温州市经济学会会长马津龙等知名企业家、天使人、学者300位应邀到场支持"},
+          {bigCircle:0,dayLeft:1,year:'2017',Mouth:'Aug',day:'/18',title:"氢创投资于浙南云谷举办新商业新连锁818项目对接会，确立新商业新连锁的创业孵化与投融资服务的战略定位"},
+          {bigCircle:0,dayLeft:0,year:'2017',Mouth:'Apr',day:'/15',title:"温创资本股权注资氢创投资",detail:"温创资本股权注资氢创投资，助力投融资平台和城市创投中心"},
           {bigCircle:1,year:'2016'},
-          {bigCircle:0,dayLeft:1,year:'2016',Mouth:'Oct',day:'/11',title:"首个平台上线项目OISation成功路演",detail:"首个在氢创社平台进行路演的项目,超80位天使投资人到场观看"},
-          {bigCircle:0,dayLeft:0,year:'2016',Mouth:'Sep',day:'/28',title:"新媒体成立",detail:"打造氢创社自己的扩音器，打造氢创社自己的扩音器"}
+          {bigCircle:0,dayLeft:1,year:'2016',Mouth:'Dec',day:'/12',title:"氢创投资长沙联社成立",detail:"湖南省领导莅临氢创投资考察，氢创投资长沙分社成立，确立氢创同城合伙人发展体系"},
+          {bigCircle:0,dayLeft:0,year:'2016',Mouth:'Sep',day:'/28',title:"氢创投资旗下成立氢创社品牌",detail:"氢创投资旗下成立氢创社品牌，为新商业领域项目提供品牌策划、创业资讯、全媒体渠道合作推广等服务"},
+          {bigCircle:0,dayLeft:1,year:'2016',Mouth:'Sep',day:'/12',title:"第一期100位天使全球招募成功",detail:"氢创投资第一期100位天使全球招募成功，为氢创投资服务全国创业者打下战略基础"},
+          {bigCircle:0,dayLeft:0,year:'2016',Mouth:'Jul',day:'/20',title:"第一批8个项目入驻氢创投资众创空间",detail:"知造署、遗失、奇宝云商等8个第一批项目入驻众创空间"},
+          {bigCircle:0,dayLeft:1,year:'2016',Mouth:'Jul',day:'/08',title:"氢创投资旗下成立氢创同城品牌",detail:"氢创投资成立氢创同城业务模块，是垂直同城创投线上线下协同的服务平台，线下“百城千场”项目投融资对接会为同城原创性好项目发展助力"},
+          {bigCircle:1,year:'2015'},
+          {bigCircle:0,dayLeft:0,year:'2015',Mouth:'Nov',day:'/12',title:"氢创投资成立",detail:"氢创投资创始团队成立，以夏美帖、曾家猛、何雪艳三位创始人为核心组建团队，标志着氢创投资项目正式开始运行"}
         ],
         timer:''
       }
