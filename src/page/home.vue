@@ -341,7 +341,7 @@
         },
         events:[
           {bigCircle:1,year:'2017'},
-          {bigCircle:0,dayLeft:1,year:'2017',Mouth:'Aug',day:'/18',title:"氢创投资于浙南云谷举办新商业新连锁818项目对接会，确立新商业新连锁的创业孵化与投融资服务的战略定位"},
+          {bigCircle:0,dayLeft:1,year:'2017',Mouth:'Aug',day:'/18',title:"举办新商业新连锁818项目对接会",detail:"氢创投资于浙南云谷举办新商业新连锁818项目对接会，确立新商业新连锁的创业孵化与投融资服务的战略定位"},
           {bigCircle:0,dayLeft:0,year:'2017',Mouth:'Apr',day:'/15',title:"温创资本股权注资氢创投资",detail:"温创资本股权注资氢创投资，助力投融资平台和城市创投中心"},
           {bigCircle:1,year:'2016'},
           {bigCircle:0,dayLeft:1,year:'2016',Mouth:'Dec',day:'/12',title:"氢创投资长沙联社成立",detail:"湖南省领导莅临氢创投资考察，氢创投资长沙分社成立，确立氢创同城合伙人发展体系"},
@@ -422,7 +422,7 @@
           alert("请输入正确的手机号")
           return;
         }
-        $.getJSON("http://laravel.hcsoo.com/api/city/fensheApply",data).then(function (response) {
+        $.getJSON("http://www.hcsoo.com/api/city/fensheApply",data).then(function (response) {
           if(response.code){
             _this.showMC=true;
           }else {
