@@ -1,9 +1,9 @@
 <template>
   <div>
       <!--头部导航-->
-      <div class="topContain">
-        <div style="position: absolute; top:0; left: 0;  z-index: -1; width: 100%; min-width: 1200px; overflow: hidden ">
-          <ul :style="{marginLeft:-oneWidth*(bgIndex-1)+'px'}" :class="target?'noAction':''">
+      <div class="topContain" @mouseover="mouseOver" @mouseout="mouseOut">
+        <div style="position: absolute; top:0; left: 0;  z-index: -1; width: 100%; min-width: 1200px; overflow: hidden " >
+          <ul :style="{marginLeft:-oneWidth*(bgIndex-1)+'px'}" :class="target?'noAction':''" >
             <li :style="{width:oneWidth+'px'}"><img src="static/banner1.jpg" class="topImg" :style="{width:oneWidth+'px'}"></li>
             <li :style="{width:oneWidth+'px'}"><img src="static/banner2.jpg" class="topImg" :style="{width:oneWidth+'px'}"></li>
             <li :style="{width:oneWidth+'px'}"><img src="static/banner3.jpg" class="topImg" :style="{width:oneWidth+'px'}"></li>
@@ -20,6 +20,11 @@
             <li><a href="javascript:void(0)" @click="goAnchor('#anchor-3')">大事记</a></li>
             <li><a href="javascript:void(0)" @click="goAnchor('#anchor-4')">价值提供</a></li>
             <li><a href="javascript:void(0)" @click="goAnchor('#anchor-5')">常见问题</a></li>
+            <!--<li><a href="home#anchor-1">同城简介</a></li>
+            <li><a href="home#anchor-2">解决问题</a></li>
+            <li><a href="home#anchor-3">大事记</a></li>
+            <li><a href="home#anchor-4">价值提供</a></li>
+            <li><a href="home#anchor-5">常见问题</a></li>-->
           </ul>
         </div>
     <!--    <div style="width: 1200px;position: relative;">
@@ -35,7 +40,7 @@
         </div>
       </div>
       <!--固定导航-->
-      <div v-if="showMenu" class="nav">
+      <div v-if="showMenu&&!reset" class="nav">
         <div class="topCol">
           <img src="static/dibuLOGO.png" />
           <ul>
@@ -317,6 +322,7 @@
         stepHoverIndex:0,
         stepIndex:1,
         bgIndex:1,
+        bgHover:false,
         menuSelect:1,
         oneWidth:1920,
         ceyiSelect:0,
@@ -324,6 +330,7 @@
         target:false,
         showMC:false,
         showMenu:false,
+        reset:false,
         domTopList:[],
         userInfo:{
           name:"",
@@ -376,7 +383,6 @@
           document.documentElement.scrollTop = anchor.offsetTop;
           document.body.scrollTop = anchor.offsetTop;
         }
-
       },
       resetAnimate(index){
         this.bgIndex=index;
@@ -386,6 +392,8 @@
         var _this=this;
         clearInterval(this.timer)
         this.timer=setInterval(function(){
+          if(_this.bgHover)
+             return;
           _this.bgIndex+=1;
           if(_this.bgIndex>3){
             setTimeout(function(){
@@ -401,7 +409,6 @@
         },5000)
       },
       submit(para){
-        console.log(para)
         var data;
         var _this=this;
         if(para){
@@ -430,8 +437,11 @@
           }
         })
       },
-      testB(){
-        console.log(123)
+      mouseOver(){
+       this.bgHover=true;
+      },
+      mouseOut(){
+        this.bgHover=false;
       }
     },
     components:{
@@ -439,33 +449,40 @@
         foot
     },mounted(){
       this.select = '#anchor-'+this.$route.query.select;
-      this.goAnchor(this.select);
+
       var _this=this;
+      _this.goAnchor(_this.select);
+      _this.reset=true;
+      setTimeout(function () {
+        _this.goAnchor(_this.select);
+        _this.reset=false
+      },1000)
+
       this.domTopList=[];
       for(var i=1;i<=5;i++){
         this.domTopList[i-1]=$("#anchor-"+i).offset().top-70;
       }
       window.onscroll = function () {
         /*945,116*/
-         var currentTop= document.body.scrollTop||document.documentElement.scrollTop;
-           for(var i=0;i<5;i++){
-             if(currentTop<_this.domTopList[0]){
-               _this.menuSelect=1;
-               break;
-             }else if(currentTop>_this.domTopList[i]&&currentTop<_this.domTopList[i+1]){
-              _this.menuSelect=i+1;
-              break;
-            }else if(currentTop>_this.domTopList[4]){
-               _this.menuSelect=5;
-               break;
-             }
+        var currentTop= document.body.scrollTop||document.documentElement.scrollTop;
+        for(var i=0;i<5;i++){
+          if(currentTop<_this.domTopList[0]){
+            _this.menuSelect=1;
+            break;
+          }else if(currentTop>_this.domTopList[i]&&currentTop<_this.domTopList[i+1]){
+            _this.menuSelect=i+1;
+            break;
+          }else if(currentTop>_this.domTopList[4]){
+            _this.menuSelect=5;
+            break;
           }
-         if(currentTop>=945){
-           _this.showMenu=true;
-         }
-         else{
-           _this.showMenu=false;
-         }
+        }
+        if(currentTop>=800){
+          _this.showMenu=true;
+        }
+        else{
+          _this.showMenu=false;
+        }
       }
     }
 

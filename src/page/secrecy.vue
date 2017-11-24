@@ -14,11 +14,16 @@
              <li><a href="home#cjwt">常见问题</a></li>
            </ul>-->
           <ul>
-            <li><router-link :to="{name:'home',query:{select:1}}">同城简介</router-link></li>
-            <li><router-link :to="{name:'home',query:{select:2}}">解决问题</router-link></li>
-            <li><router-link :to="{name:'home',query:{select:3}}">大事记</router-link></li>
-            <li><router-link :to="{name:'home',query:{select:4}}">价值提供</router-link></li>
-            <li><router-link :to="{name:'home',query:{select:5}}">常见问题</router-link></li>
+              <li><router-link :to="{name:'home',query:{select:1}}">同城简介</router-link></li>
+             <li><router-link :to="{name:'home',query:{select:2}}">解决问题</router-link></li>
+             <li><router-link :to="{name:'home',query:{select:3}}">大事记</router-link></li>
+             <li><router-link :to="{name:'home',query:{select:4}}">价值提供</router-link></li>
+             <li><router-link :to="{name:'home',query:{select:5}}">常见问题</router-link></li>
+            <!--<li><a href="home#anchor-1">同城简介</a></li>
+            <li><a href="home#anchor-2">解决问题</a></li>
+            <li><a href="home#anchor-3">大事记</a></li>
+            <li><a href="home#anchor-4">价值提供</a></li>
+            <li><a href="home#anchor-5">常见问题</a></li>-->
           </ul>
         </div>
       </div>
