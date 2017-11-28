@@ -21,7 +21,7 @@ div{margin: 0 auto}
 .logo{position: absolute;  width: 325px; top:270px;z-index: 99; left:0; right: 0; margin: 0 auto;}
 .title{position: relative;margin-top: 606px; overflow: hidden; color: white; font-size: 26px; z-index: 100}
 .describe{position: relative;margin-top: 25px; overflow: hidden; color: white; font-size: 20px; z-index: 100}
-.selectDiv{position: relative; height:4px;width: 240px; margin-top: 840px}
+.selectDiv{position: relative; height:4px;width: 160px; margin-top: 750px}
 .selectDiv a{margin: 0 10px;height:4px; width: 60px; float: left; background-color: #fff}
 .selectDiv a:hover,.selectDiv .select{background-color: #99d4ef}
 .intro{min-width: 1200px; font-size: 30px; padding: 135px 0 37px; color: #545d69;}

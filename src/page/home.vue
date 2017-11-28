@@ -5,10 +5,8 @@
         <div style="position: absolute; top:0; left: 0;  z-index: -1; width: 100%; min-width: 1200px; overflow: hidden " >
           <ul :style="{marginLeft:-oneWidth*(bgIndex-1)+'px'}" :class="target?'noAction':''" >
             <li :style="{width:oneWidth+'px'}"><img src="static/banner1.jpg" class="topImg" :style="{width:oneWidth+'px'}"></li>
-            <li :style="{width:oneWidth+'px'}"><img src="static/banner2.jpg" class="topImg" :style="{width:oneWidth+'px'}"></li>
             <li :style="{width:oneWidth+'px'}"><img src="static/banner3.jpg" class="topImg" :style="{width:oneWidth+'px'}"></li>
             <li :style="{width:oneWidth+'px'}"><img src="static/banner1.jpg" class="topImg" :style="{width:oneWidth+'px'}"></li>
-            <li :style="{width:oneWidth+'px'}"><img src="static/banner2.jpg" class="topImg" :style="{width:oneWidth+'px'}"></li>
             <li :style="{width:oneWidth+'px'}"><img src="static/banner3.jpg" class="topImg" :style="{width:oneWidth+'px'}"></li>
           </ul>
         </div>
@@ -34,9 +32,8 @@
         <div class="title">氢创同城</div>
         <div class="describe">项目投融资服务 \ 项目培育孵化 \ 新媒体服务 \ 项目对接活动服务 \ 全国100个分社</div>-->
         <div class="selectDiv">
-          <a :class="bgIndex%3==1?'select':''" @click="resetAnimate(1)"></a>
-          <a :class="bgIndex%3==2?'select':''" @click="resetAnimate(2)"></a>
-          <a :class="bgIndex%3==0?'select':''" @click="resetAnimate(3)"></a>
+          <a :class="bgIndex%2==1?'select':''" @click="resetAnimate(1)"></a>
+          <a :class="bgIndex%2==0?'select':''" @click="resetAnimate(2)"></a>
         </div>
       </div>
       <!--固定导航-->
@@ -323,6 +320,7 @@
         stepIndex:1,
         bgIndex:1,
         bgHover:false,
+        bgTotalNum:2,
         menuSelect:1,
         oneWidth:1920,
         ceyiSelect:0,
@@ -395,11 +393,11 @@
           if(_this.bgHover)
              return;
           _this.bgIndex+=1;
-          if(_this.bgIndex>3){
+          if(_this.bgIndex>_this.bgTotalNum){
             setTimeout(function(){
-              if(_this.bgIndex>3){
+              if(_this.bgIndex>_this.bgTotalNum){
                 _this.target=true;
-                _this.bgIndex=_this.bgIndex-=3;
+                _this.bgIndex=_this.bgIndex-=_this.bgTotalNum;
                 setTimeout(function(){
                   _this.target=false;
                 },100)
@@ -429,7 +427,7 @@
           alert("请输入正确的手机号")
           return;
         }
-        $.getJSON("http://www.hcsoo.com/api/city/fensheApply",data).then(function (response) {
+        $.getJSON("https://www.hcsoo.com/api/city/fensheApply",data).then(function (response) {
           if(response.code){
             _this.showMC=true;
           }else {
