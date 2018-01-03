@@ -270,7 +270,7 @@
           <li><span class="name"><span style="color: #c32225">*&nbsp;</span>姓名:</span><input type="text"  v-model="userInfox.name"/></li>
           <li><span class="name"><span style="color: #c32225">*&nbsp;</span>电话:</span><input type="text"  v-model="userInfox.mobile"/></li>
           <li><span class="name"><span style="color: #c32225">*&nbsp;</span>所在城市:</span><input type="text"  v-model="userInfox.location"/></li>
-          <li><span class="name">公司名称:</span><input type="text"  v-model="userInfox. company"/></li>
+          <li><span class="name">公司名称:</span><input type="text"  v-model="userInfox.company"/></li>
         </ul>
         <div @click="submit(1)" class="submit">立即提交</div>
       </div>
