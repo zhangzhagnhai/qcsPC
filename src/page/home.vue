@@ -103,6 +103,26 @@
               <p>为服务企业的第三方机构<br>提供优质对象</p>
             </li>
           </ul>
+          <div class="titleX" style="margin-top: 190px">加入氢创会员共享圈内创投资源</div>
+          <p class="vipMeta">氢创同城重磅打造“五新“商业<br>新零售 / 新连锁 / 新技术 / 新服务 / 新金融</p>
+          <p class="vipDes">只要您从事的项目和行业涉及“五新”（零售、教育、餐饮、文旅等）<br>只要您有意愿参与“五新”项目的合作或投资</p>
+           <ul class="vipUl">
+             <li>
+               <img src="static/qingya.png">
+               <h3>氢芽会员</h3>
+               <p>免费注册会员</p>
+             </li>
+             <li>
+               <img src="static/qingmiao.png">
+               <h3>氢苗会员</h3>
+               <p>付费参加的企业创始人、<br>联合创始人、CEO</p>
+             </li>
+             <li>
+               <img src="static/qingsong.png">
+               <h3>氢松会员</h3>
+               <p>明星企业家、顾问导师、<br>创投机构、行业投资人</p>
+             </li>
+           </ul>
       </div>
      <!--大事记-->
       <div id="anchor-3" class="eventContain">
