@@ -74,7 +74,7 @@
         </ul>
       </div>
       <!--解决问题-->
-      <div id="anchor-2" class="resolveContain">
+      <div id="anchor-2" class="resolveContain" style="padding-bottom: 60px">
           <div class="titleX">氢创投资为您解决哪些问题</div>
           <ul class="resolveUl">
               <li>
@@ -103,29 +103,32 @@
               <p>为服务企业的第三方机构<br>提供优质对象</p>
             </li>
           </ul>
-          <div class="titleX" style="margin-top: 190px">加入氢创会员共享圈内创投资源</div>
-          <p class="vipMeta">氢创同城重磅打造“五新“商业<br>新零售 / 新连锁 / 新技术 / 新服务 / 新金融</p>
-          <p class="vipDes">只要您从事的项目和行业涉及“五新”（零售、教育、餐饮、文旅等）<br>只要您有意愿参与“五新”项目的合作或投资</p>
-           <ul class="vipUl">
-             <li>
-               <img src="static/qingya.png">
-               <h3>氢芽会员</h3>
-               <p>免费注册会员</p>
-             </li>
-             <li>
-               <img src="static/qingmiao.png">
-               <h3>氢苗会员</h3>
-               <p>付费参加的企业创始人、<br>联合创始人、CEO</p>
-             </li>
-             <li>
-               <img src="static/qingsong.png">
-               <h3>氢松会员</h3>
-               <p>明星企业家、顾问导师、<br>创投机构、行业投资人</p>
-             </li>
-           </ul>
       </div>
+     <div id="anchor-3"   class="resolveContain">
+      <div class="titleX" >加入氢创会员共享圈内创投资源</div>
+      <p class="vipMeta">氢创同城重磅打造“五新“商业<br>新零售 / 新连锁 / 新技术 / 新服务 / 新金融</p>
+      <p class="vipDes">只要您从事的项目和行业涉及“五新”（零售、教育、餐饮、文旅等）<br>只要您有意愿参与“五新”项目的合作或投资</p>
+      <img src="static/huiyuanerweima.png" class="vipEWM">
+      <ul class="vipUl">
+        <li>
+          <img src="static/qingya.png">
+          <h3>氢芽会员</h3>
+          <p>免费注册会员</p>
+        </li>
+        <li>
+          <img src="static/qingmiao.png">
+          <h3>氢苗会员</h3>
+          <p>付费参加的企业创始人、<br>联合创始人、CEO</p>
+        </li>
+        <li>
+          <img src="static/qingsong.png">
+          <h3>氢松会员</h3>
+          <p>明星企业家、顾问导师、<br>创投机构、行业投资人</p>
+        </li>
+      </ul>
+    </div>
      <!--大事记-->
-      <div id="anchor-3" class="eventContain">
+      <div id="anchor-4" class="eventContain">
        <div class="titleX" style="margin-bottom: 93px">氢创投资大事记</div>
        <div v-for="event in events">
           <div v-if="event.bigCircle" class="bigCircle">
@@ -136,7 +139,7 @@
        </div>
      </div>
       <!--加入步骤-->
-      <div id="anchor-4" style="min-width: 1200px; background-color: #f9f9f9; ">
+      <div id="anchor-5" style="min-width: 1200px; background-color: #f9f9f9; ">
         <div class="titleX" style=" padding-top: 135px;">城市合伙人招募</div>
          <div style="height: 690px; min-width: 1002px;">
              <div @mouseout="stepHoverIndex=7"  class="stepMenu">
@@ -258,7 +261,7 @@
          </div>
       </div>
       <!--常见问题-->
-      <div id="anchor-5" class="problemContain">
+      <div id="anchor-6" class="problemContain">
           <img src="static/changjianwenti.png" class="problemImg">
           <div class="titleX" style=" margin-top: 46px;">常见问题</div>
           <div class="problemScroll">
@@ -477,13 +480,13 @@
       },1000)
 
       this.domTopList=[];
-      for(var i=1;i<=5;i++){
+      for(var i=1;i<=6;i++){
         this.domTopList[i-1]=$("#anchor-"+i).offset().top-70;
       }
       window.onscroll = function () {
         /*945,116*/
         var currentTop= document.body.scrollTop||document.documentElement.scrollTop;
-        for(var i=0;i<5;i++){
+        for(var i=0;i<6;i++){
           if(currentTop<_this.domTopList[0]){
             _this.menuSelect=1;
             break;
