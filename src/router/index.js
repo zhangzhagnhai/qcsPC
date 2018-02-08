@@ -9,7 +9,14 @@ import about from '@/page/about.vue'
 Vue.use(Router)
 
 export default new Router({
-/*  mode:"history",*/
+ /* mode:"history",
+  scrollBehavior(to, from, savedPosition) {
+    if (!savedPosition) {
+      savedPosition = { x: 0, y: 0 }
+    }
+
+    return savedPosition
+  },*/
   routes: [
     {
       path: '/',

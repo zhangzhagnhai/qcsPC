@@ -15,9 +15,9 @@
           <ul>
             <li><a href="javascript:void(0)" @click="goAnchor('#anchor-1')">同城简介</a></li>
             <li><a href="javascript:void(0)" @click="goAnchor('#anchor-2')">解决问题</a></li>
-            <li><a href="javascript:void(0)" @click="goAnchor('#anchor-3')">大事记</a></li>
-            <li><a href="javascript:void(0)" @click="goAnchor('#anchor-4')">价值提供</a></li>
-            <li><a href="javascript:void(0)" @click="goAnchor('#anchor-5')">常见问题</a></li>
+            <li><a href="javascript:void(0)" @click="goAnchor('#anchor-4')">大事记</a></li>
+            <li><a href="javascript:void(0)" @click="goAnchor('#anchor-5')">价值提供</a></li>
+            <li><a href="javascript:void(0)" @click="goAnchor('#anchor-6')">常见问题</a></li>
             <!--<li><a href="home#anchor-1">同城简介</a></li>
             <li><a href="home#anchor-2">解决问题</a></li>
             <li><a href="home#anchor-3">大事记</a></li>
@@ -43,9 +43,9 @@
           <ul>
             <li><a :class="menuSelect==1?'select':''" href="javascript:void(0)" @click="goAnchor('#anchor-1')">同城简介</a></li>
             <li><a :class="menuSelect==2?'select':''" href="javascript:void(0)" @click="goAnchor('#anchor-2')">解决问题</a></li>
-            <li><a :class="menuSelect==3?'select':''" href="javascript:void(0)" @click="goAnchor('#anchor-3')">大事记</a></li>
-            <li><a :class="menuSelect==4?'select':''" href="javascript:void(0)" @click="goAnchor('#anchor-4')">价值提供</a></li>
-            <li><a :class="menuSelect==5?'select':''" href="javascript:void(0)" @click="goAnchor('#anchor-5')">常见问题</a></li>
+            <li><a :class="menuSelect==3||menuSelect==4?'select':''" href="javascript:void(0)" @click="goAnchor('#anchor-4')">大事记</a></li>
+            <li><a :class="menuSelect==5?'select':''" href="javascript:void(0)" @click="goAnchor('#anchor-5')">价值提供</a></li>
+            <li><a :class="menuSelect==6?'select':''" href="javascript:void(0)" @click="goAnchor('#anchor-6')">常见问题</a></li>
           </ul>
         </div>
       </div>
@@ -477,7 +477,7 @@
       setTimeout(function () {
         _this.goAnchor(_this.select);
         _this.reset=false
-      },1000)
+      },100)
 
       this.domTopList=[];
       for(var i=1;i<=6;i++){
