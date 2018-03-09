@@ -8,7 +8,7 @@
         <div class="centerB" style="margin-top: 56px;">联系电话:0577-86121121<span style="margin-left: 30px">
               13957756423
         </span><span style="margin-left: 30px">邮箱:1211210577@qq.com</span></div>
-        <div class="centerB" style="margin-top: 16px;">公司地址:浙江省温州市文昌路高新技术园D幢4楼、蒲中路11号温商中心4楼</div>
+        <div class="centerB" style="margin-top: 16px;">公司地址:浙江省温州市文昌路高新技术园D幢4楼、蒲中路111号温商中心4楼</div>
       </div>
       <ul class="footerRight">
         <li>
